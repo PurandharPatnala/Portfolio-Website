@@ -1,0 +1,354 @@
+/* Set background color to black for the whole page */
+body {
+    background-color: black;
+    color: white; /* Change text color to white */
+    font-family: Arial, sans-serif; /* Optional: change font style */
+    margin: 0;
+    padding: 0;
+}
+
+/* Optional: Style the header */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between the "My Portfolio" and the nav */
+    align-items: center; /* Vertically center the items */
+    background-color: #23013b; /* Dark purple background for header */
+    padding: 10px;
+}
+
+/* Style the "My Portfolio" text in the header */
+header h1 {
+    margin: 0;
+    font-size: 24px; /* Optional: adjust the font size */
+}
+
+/* Optional: Style the navigation list */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the nav list horizontal */
+}
+
+nav ul li {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Style the sections */
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: black; /* Darker background for sections */
+}
+
+/* Flexbox layout for the Home section */
+#home {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Vertically center the items */
+    padding: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-left: 200px;
+}
+
+/* Style the text in the Home section */
+#home h1 {
+    margin: 0;
+    flex-grow: 1; /* Allow the text to grow and take available space */
+}
+
+/* Resize the image and align it to the right */
+.resize-and-align {
+    width: 650px; /* You can change this to any width you prefer */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 550px; /* Optional: add space between image and text */
+    margin-top: -400px;
+}
+
+/* About Section Styling */
+#about {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: justify;
+    margin-right: 100px; /* Optional: adds some space from the right edge */
+    margin-left: 475px; /* Optional: adds some space from the left edge */
+    margin-top: -100px;
+    line-height: 1.4;
+}
+
+.men-resize {
+    width: 300px; /* You can change this to any width you prefer */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -300px; /* Optional: add space between image and text */
+    margin-top: -500px;
+    margin-bottom: 50px;
+}
+
+/* Slider Section Styling */
+#slider-section {
+    padding: 20px;
+    background-color: black;
+}
+
+/* Card Slider Container */
+.card-slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* To position the arrows */
+    overflow-x: hidden; /* Ensure no horizontal scrollbar */
+    overflow-y: hidden; /* Prevent vertical scrollbar */
+}
+
+/* Card Slider */
+.card-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    padding: 150px; /* Remove excessive padding */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden; /* Prevent vertical scrollbar */
+}
+
+/* Ensure no extra scrollbar */
+.card-slider-container, .card-slider {
+    width: 100%;
+}
+
+/* Card Styling */
+.card {
+    width: 220px;
+    height: 200px;
+    background-color: #91ebeb; /* Your slide color */
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(232, 163, 232); /* Right-bottom shadow with white color */
+    text-align: center;
+    flex: 0 0 auto;
+    transition: transform 0.35s ease, box-shadow 0.35s ease; /* Transition for smooth effect */
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:hover {
+    transform: scale(2.05); /* Slight scale effect on hover */
+}
+
+
+/* Card Content Styling */
+.card-content {
+    padding: 15px; /* Adjusted padding for better content fit */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Make content fit the full card height */
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: #f24030;
+    margin-bottom: 5px;
+    margin-top: -20px;
+}
+
+.card-content p {
+    font-size: 11px;
+    color: #00008b;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Left and Right Arrows Styling */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-arrow.left {
+    left: 10px;
+}
+
+.slider-arrow.right {
+    right: 10px;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+    .card-slider {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 250px;
+        height: 350px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .slider-arrow {
+        font-size: 25px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-slider {
+        gap: 5px;
+    }
+
+    .card {
+        width: 200px;
+        height: 300px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+
+    .slider-arrow {
+        font-size: 20px;
+        padding: 5px;
+    }
+}
+
+/* Portfolio Section - Folders */
+#portfolio {
+    margin: 50px 0;
+    text-align: center;
+    padding: 20px;
+    display: flex; /* Use flexbox to display folders in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the folders */
+    gap: 20px; /* Add space between folders */
+    padding-bottom: 20px; /* Ensure that content is not cut off */
+}
+
+/* Folder container for better alignment (2 per row) */
+.folder-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between folders */
+}
+
+/* Folder style */
+.folder {
+    background-color: #333;
+    color: white;
+    border: 2px solid #ddd;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: calc(50% - 20px); /* Make each folder take 50% of the container width minus gap space */
+    height: 350px;  /* 1/8th of the screen height */
+    overflow: hidden;  /* Prevent the image from overflowing */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hover effect for the folder */
+.folder:hover {
+    background-color: #555; /* Change color on hover */
+}
+
+/* Folder content visibility */
+.folder-content {
+    display: none;
+    margin-top: 20px;
+    background-color: #444;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    color: white;
+    width: 1000px;  /* Set the width to a responsive value */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+embed {
+    border: none;
+    width: 100%;
+    height: 500px;
+}
+
+/* Updated Folder image styling */
+.folder img {
+    width: 100%; /* Set width to 100% to fill the folder */
+    height: 100%; /* Set height to fill the folder */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+/* Folder content visibility */
+.folder-content {
+    display: none;
+    margin-top: 20px;
+    background-color: #444;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    color: white;
+    width: 1000px;  /* Set the width to a responsive value */
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+#contact{
+    margin-bottom: -35px;
+    margin-left: 10px;
+
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 0.5px;
+    background-color: #35013f;
+}

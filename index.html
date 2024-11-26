@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Purandhar Patnala</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio.</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>Hello, It's Me</h2>
+                <h1 style="font-size: 50px;"><em>Purandhar Patnala</em></h1>
+                <p>I'm a Data Enthusiast. Welcome to My Portfolio</p>
+                <p>Explore my work and feel free to reach out!</p>
+                <img src="Image_1.jpg" alt="Image" class="resize-and-align">
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 style="color: #DEB887; font-size: 35px;font-family: Arial, Helvetica, sans-serif;">About Me</h2>
+                <p>I'm a passionate Data Enthusiast with a keen interest in harnessing the power of data to drive insights and decision-making. 
+                    As a Cisco Certified professional, I have a strong technical foundation that allows me to effectively work with data across various platforms.
+                    I specialize in data analysis using a variety of tools, including SQL, Excel, Tableau, Power BI, and Python. These skills enable me to manipulate, analyze, 
+                    and visualize data to uncover trends, patterns, and actionable insights. With a strong grasp of data management and data visualization, I am well-equipped 
+                    to help businesses make data-driven decisions.
+                    In addition, I am deeply interested in the evolving field of Generative AI (Gen AI) and its potential to revolutionize data processing, analysis, and decision-making. 
+                    As the industry embraces AI technologies, I am dedicated to learning and adapting to new advancements in machine learning, natural language processing, and predictive analytics to stay ahead of the curve.
+                    As a fresher, I am eager to apply my skills in a real-world setting, collaborate with industry professionals, and contribute to impactful data-driven projects. I am always excited 
+                    about exploring new opportunities to grow and make a meaningful impact in the world of data analytics.
+                    Feel free to explore my portfolio, and I look forward to connecting with like-minded professionals and organizations to drive success through data.</p>
+                <img src="Men.jpg" alt="About" class="men-resize">
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 style="color: #feb062; font-size: 35px; font-family: Arial, Helvetica, sans-serif; text-align: center; margin-bottom: 5px;">My Skills</h2>
+
+            <div class="card-slider-container">
+                <div class="card-slider">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Front-End</h3>
+                            <p>HTML5</p>
+                            <p>CSS3</p>
+                            <p>JavaScript (JS)</p>
+                            <p>Cloud and Hosting Services</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>SQL</h3>
+                            <p>Data Manipulation</p>
+                            <p>Data Definition</p>
+                            <p>Data Retrieval</p>
+                            <p>Aggregations and Functions</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Excel</h3>
+                            <p>Formulas and Functions</p>
+                            <p>Data Organization and Cleaning</p>
+                            <p>Text and Date Manipulation</p>
+                            <p>Database Management</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Python</h3>
+                            <p>NumPy</p>
+                            <p>Pandas</p>
+                            <p>Data Structures</p>
+                            <p>Matplotlib</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Data Visualization</h3>
+                            <p>Power BI</p>
+                            <p>Tableau</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2 style="color: #fffbbe; font-size: 35px; font-family: Arial, Helvetica, sans-serif; text-align: center;"">Projects Done</h2>
+            
+            <!-- Folder Container for Projects (2 folders per row) -->
+            <div class="folder-container">
+                <!-- Folder 1 -->
+                <div class="folder" onclick="toggleFolder('folder1')">
+                    <img src="0001.jpg" alt="Project 1" class="folder-image">
+                    <div class="folder-name"></div>
+                </div>
+                <div class="folder-content" id="folder1">
+                    <embed src="Shopping_Data.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+
+                <!-- Folder 2 -->
+                <div class="folder" onclick="toggleFolder('folder2')">
+                    <img src="img.jpg" alt="Project 2" class="folder-image">
+                    <div class="folder-name"></div>
+                </div>
+                <div class="folder-content" id="folder2">
+                    <embed src="Shopping_Data.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+
+                <!-- Folder 3 -->
+                <div class="folder" onclick="toggleFolder('folder3')">
+                    <img src="img.jpg" alt="Project 3" class="folder-image">
+                    <div class="folder-name"></div>
+                </div>
+                <div class="folder-content" id="folder3">
+                    <embed src="Shopping_Data.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+
+                <!-- Folder 4 -->
+                <div class="folder" onclick="toggleFolder('folder4')">
+                    <img src="img.jpg" alt="Project 4" class="folder-image">
+                    <div class="folder-name"></div>
+                </div>
+                <div class="folder-content" id="folder4">
+                    <embed src="Shopping_Data.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>If you'd like to collaborate or get in touch, feel free to reach out at</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Social Media Buttons -->
+    <div class="social-media-buttons">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/9347067029?text=Hello" target="_blank">
+            <img src="Logo.png" alt="WhatsApp" style="width: 100px; height: auto; margin-right: 25px;margin-bottom: 15px;">
+        </a>
+        
+        <!-- Gmail Button -->
+        <a href="mailto:your-purandhar2000@gmail.com?subject=Hello&body=Hi%20Purandhar,%20I%20would%20like%20to%20connect!" target="_blank">
+            <img src="email.png" alt="Gmail" style="width: 75px; height: auto; margin-left: 10px;margin-right: 25px;margin-bottom: 15px;">
+        </a>
+        
+        <!-- LinkedIn Button -->
+        <a href="https://www.linkedin.com/in/purandhar-patnala-bb3682176/" target="_blank">
+            <img src="LinkedIn.png" alt="LinkedIn" style="width: 100px; height: 140px; margin-left: 10px;margin-bottom: -26px;">
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Purandhar Patnala. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
